@@ -11,9 +11,13 @@ const RouterManager = () => {
   const {store} = useContext(AppContext);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter>{console.log('pass here')}
       <Switch>
-        <Route path='/login' component={LoginPage} />
+        <Route path='/login' render={() => 
+          store.isAuthenticated 
+          ? <DashboardPage />
+          : <LoginPage />
+        }/>
         <PrivateRoute path='/' component={DashboardPage}/>
         <PrivateRoute path='/dashboard' component={DashboardPage} />
         <PrivateRoute path='/view' component={ViewPage} />

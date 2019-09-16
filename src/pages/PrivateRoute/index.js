@@ -4,6 +4,7 @@ import { AppContext } from '../../contexts/appContext';
 
 export const PrivateRoute = ({ component: Component, ...rest }) => {
     const { store } = useContext(AppContext);
+    console.log(store.userInfo, 'from privateroute')
     return (
         <Route
             {...rest}

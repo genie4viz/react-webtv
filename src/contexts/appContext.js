@@ -3,15 +3,31 @@ import React, {useReducer, createContext} from 'react';
 const AppContext = createContext(null);
 
 const initialState = {
-    isAuthenticated: false
+    isAuthenticated: false,
+    userInfo: {
+        id: null,
+        password: null
+    }
 };
 
 const appReducer = (state, action) => {
     switch (action.type) {
         case 'REGISTER_ID':
-            return {isAuthenticated: true};
+            return {
+                isAuthenticated: true, 
+                userInfo: {
+                    id: action.value.id,
+                    password: action.value.password
+                }
+            };
         case 'UNREGISTER_ID':
-            return {isAuthenticated: false};
+            return {
+                isAuthenticated: false,
+                userInfo: {
+                    id: null,
+                    password: null
+                }
+            };
         default:
             throw new Error('Unexpected action');
     }
