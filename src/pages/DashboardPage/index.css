@@ -1,8 +1,46 @@
-.dashboard-header {
-    background: none !important;
-}
+.dashboard-frame {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+  }
+  
+  .pattern-over {
+    background: url(../../assets/images/pattern.png);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .img-responsive {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+  }
+  
+  .dashboard-background-img {
+    background-attachment: fixed;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    min-width: 1024px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .dashboard-layout {
+    background-color: transparent !important;
+    z-index: 5;
+  }
 
-.dashboard-nav-menu {
-    background-color: transparent;
-    line-height: 64px;
-}
+  .expiration-span {
+    margin-top: 22px;
+    font-size: 18px;
+    color: white;
+  }

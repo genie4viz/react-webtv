@@ -3,7 +3,7 @@ import React, {useReducer, createContext} from 'react';
 const AppContext = createContext(null);
 
 const initialState = {
-    isAuthenticated: false,
+    isAuthenticated: true,
     userInfo: {
         id: null,
         password: null
@@ -14,7 +14,7 @@ const appReducer = (state, action) => {
     switch (action.type) {
         case 'REGISTER_ID':
             return {
-                isAuthenticated: true, 
+                isAuthenticated: true,
                 userInfo: {
                     id: action.value.id,
                     password: action.value.password
