@@ -35,6 +35,8 @@
 }
 
 .view-layout {
+    display: flex;
+    width: 100%;
     background-color: transparent !important;
     z-index: 5;
 }
